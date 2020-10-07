@@ -7,9 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.deviceinfomanager.databinding.FragmentBuildInfoBinding
 import com.example.devicemanager.DeviceManager
+import javax.inject.Inject
 
 class ScreenInfoFragment : Fragment() {
+
+    @Inject
+    lateinit var deviceManager: DeviceManager;
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        (activity?.application as DeviceManagerApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
     }
 
@@ -24,7 +30,6 @@ class ScreenInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val fragmentBuildInfoBinding = FragmentBuildInfoBinding.bind(view)
-        val deviceManager = DeviceManager()
         fragmentBuildInfoBinding.buildRv.adapter = BuildRvAdt()
         (fragmentBuildInfoBinding.buildRv.adapter as BuildRvAdt).apply {
             setData(ArrayList<BuildData>().apply {
