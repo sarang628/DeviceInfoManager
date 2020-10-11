@@ -8,4 +8,5 @@ import dagger.Module
 interface AppComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(screenInfoFragment: ScreenInfoFragment)
+    fun inject(phoneInfoFragment: PhoneInfoFragment)
 }
