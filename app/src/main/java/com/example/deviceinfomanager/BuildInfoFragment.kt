@@ -36,7 +36,7 @@ class BuildInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val fragmentBuildInfoBinding = FragmentBuildInfoBinding.bind(view)
-        val deviceManager = DeviceManager()
+        val deviceManager = DeviceManager(context!!)
         fragmentBuildInfoBinding.buildRv.adapter = BuildRvAdt()
         (fragmentBuildInfoBinding.buildRv.adapter as BuildRvAdt).apply {
             setData(ArrayList<BuildData>().apply {

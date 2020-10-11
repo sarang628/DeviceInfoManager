@@ -2,10 +2,17 @@ package com.example.devicemanager
 
 import android.content.Context
 import android.os.Build
+import android.telephony.PhoneNumberUtils
 import android.util.DisplayMetrics
 import android.view.WindowManager
+import com.example.srteleponymanager.SrTelephonyManager
+import com.example.srteleponymanager.SrTelephonyManagerImpl
+import javax.inject.Inject
 
-class DeviceManager {
+class DeviceManager(context: Context) {
+
+    val srTelephonyManager = SrTelephonyManagerImpl(context)
+
     val user: String get() = Build.USER
 
     private fun getWindowManager(context: Context): WindowManager {
@@ -64,5 +71,9 @@ class DeviceManager {
         var displayMetrics = DisplayMetrics()
         getWindowManager(context).defaultDisplay.getMetrics(displayMetrics)
         return displayMetrics.ydpi
+    }
+
+    fun getNumber() {
+
     }
 }
