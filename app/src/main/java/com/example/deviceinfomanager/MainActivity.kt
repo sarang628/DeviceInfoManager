@@ -15,22 +15,25 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding.viewPager.adapter =
             object : FragmentStatePagerAdapter(supportFragmentManager, 0) {
                 override fun getCount(): Int {
-                    return 2
+                    return 3
                 }
 
                 override fun getItem(position: Int): Fragment {
                     when (position) {
                         0 -> return BuildInfoFragment.newInstance("", "")
                         1 -> return ScreenInfoFragment.newInstance("", "")
+                        2 -> return PhoneInfoFragment.newInstance()
                     }
-                    return return BuildInfoFragment.newInstance("", "")
+                    return BuildInfoFragment.newInstance("", "")
                 }
 
                 override fun getPageTitle(position: Int): CharSequence? {
                     if (position == 0)
                         return "Build"
-                    else {
+                    else if (position == 1)
                         return "Screen"
+                    else {
+                        return "Phone"
                     }
                 }
 
