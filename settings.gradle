@@ -5,3 +5,10 @@ project(':devicemanager').projectDir = new File('/Users/sarangyang/AndroidStudio
 
 include ':srteleponymanager'
 project(':srteleponymanager').projectDir = new File('/Users/sarangyang/AndroidStudioProjects/Torang/TeleponyManager/srteleponymanager')
+
+include ':torangdi'
+project(':torangdi').projectDir = new File('/Users/sarangyang/StudioProjects/TorangAndroid_master/torangdi')
+
+include ':data'
+project(':data').projectDir = new File('/Users/sarangyang/StudioProjects/TorangAndroid_master/data')
+include ':torang_devicemanager'

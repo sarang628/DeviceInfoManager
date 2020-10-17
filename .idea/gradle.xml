@@ -13,7 +13,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/devicemanager" />
+            <option value="$PROJECT_DIR$/torang_devicemanager" />
             <option value="$PROJECT_DIR$/../Torang/TeleponyManager/srteleponymanager" />
+            <option value="$USER_HOME$/StudioProjects/TorangAndroid_master/data" />
+            <option value="$USER_HOME$/StudioProjects/TorangAndroid_master/torangdi" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

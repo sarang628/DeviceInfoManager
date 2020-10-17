@@ -2,12 +2,9 @@ package com.example.devicemanager
 
 import android.content.Context
 import android.os.Build
-import android.telephony.PhoneNumberUtils
 import android.util.DisplayMetrics
 import android.view.WindowManager
-import com.example.srteleponymanager.SrTelephonyManager
 import com.example.srteleponymanager.SrTelephonyManagerImpl
-import javax.inject.Inject
 
 class DeviceManager(context: Context) {
 

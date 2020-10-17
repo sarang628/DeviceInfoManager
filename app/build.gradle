@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.deviceinfomanager"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -44,9 +44,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'com.google.dagger:dagger:2.29.1'
+    implementation project(path: ':torang_devicemanager')
+    implementation project(path: ':data')
+    implementation project(path: ':torangdi')
+    kapt 'com.google.dagger:dagger-compiler:2.29.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':srteleponymanager')
-    kapt 'com.google.dagger:dagger-compiler:2.29.1'
     implementation project(path: ':devicemanager')
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
