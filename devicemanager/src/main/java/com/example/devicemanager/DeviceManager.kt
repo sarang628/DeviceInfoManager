@@ -5,6 +5,7 @@ import android.os.Build
 import android.util.DisplayMetrics
 import android.view.WindowManager
 import com.example.srteleponymanager.SrTelephonyManagerImpl
+import java.util.*
 
 class DeviceManager(context: Context) {
 
@@ -72,5 +73,9 @@ class DeviceManager(context: Context) {
 
     fun getNumber() {
 
+    }
+
+    fun getUUID() : String{
+        return UUID.randomUUID().toString()
     }
 }
